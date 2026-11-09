@@ -9,7 +9,6 @@ import {
   CheckCircle2,
   Clock,
   RotateCcw,
-  Sparkles,
   Filter,
   Download,
   RefreshCw,
@@ -531,7 +530,6 @@ function MassPrintContent() {
               disabled={selectedIds.size === 0 || isDispatching}
               className="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-semibold shadow-md shadow-red-600/30 transition flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <Sparkles className="w-4 h-4" />
               <span>Send to Print Queue ({selectedIds.size})</span>
             </button>
           </div>
@@ -604,7 +602,6 @@ function MassPrintContent() {
                 onClick={handleSelectFirst20}
                 className="px-3 py-1.5 rounded-lg bg-red-50 hover:bg-red-100 dark:bg-red-950/50 dark:hover:bg-red-900/50 text-red-700 dark:text-red-300 font-bold text-xs border border-red-200 dark:border-red-900/60 transition flex items-center gap-1.5 shadow-2xs"
               >
-                <Sparkles className="w-3.5 h-3.5 text-red-500" />
                 <span>Select 20 Employees</span>
               </button>
 
@@ -670,7 +667,7 @@ function MassPrintContent() {
                 </button>
               </div>
 
-              {/* Template Override */}
+
               <select
                 value={selectedTemplateId}
                 onChange={(e) => setSelectedTemplateId(e.target.value)}
@@ -688,7 +685,7 @@ function MassPrintContent() {
 
           {/* Group Filter Bar */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3 pt-3 border-t border-slate-100 dark:border-slate-800/80">
-            {/* Search */}
+
             <div className="relative">
               <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5" />
               <input
@@ -700,7 +697,7 @@ function MassPrintContent() {
               />
             </div>
 
-            {/* Department Filter */}
+
             <div>
               <select
                 value={selectedDept}
